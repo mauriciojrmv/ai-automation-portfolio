@@ -6,9 +6,24 @@ Usa OpenWeatherMap API
 import requests
 import json
 from datetime import datetime
+import sys
+from pathlib import Path
 
-# Tu API Key de OpenWeatherMap (REEMPLAZA con la tuya)
-API_KEY = "9eea61dffa94f0749da50609329847bc"
+#agregar directorio raíz al path para importar config
+sys.path.append(str(Path(__file__).parent.parent))
+
+# importar api key desde config.py
+from config import OPENWEATHER_API_KEY
+
+#verificar que la key exista
+if not OPENWEATHER_API_KEY:
+    print("❌ ERROR: No se encontró la API Key. Asegúrate de tener un archivo config.py con OPENWEATHER_API_KEY definido.")
+    print("verifica que el archivo .env  tenga:")
+    print("OPENWEATHER_API_KEY=tu_api_key_aqui")
+    sys.exit(1)
+
+#usar la key importada
+API_KEY = OPENWEATHER_API_KEY
 
 # URL base de la API
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"

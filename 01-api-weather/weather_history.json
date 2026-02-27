@@ -1,0 +1,16 @@
+[
+  {
+    "city": "Santa Cruz de la Sierra",
+    "country": "BO",
+    "temperature": 32.03,
+    "condition": "muy nuboso",
+    "timestamp": "2026-02-26 15:41:10"
+  },
+  {
+    "city": "Santa Cruz de la Sierra",
+    "country": "BO",
+    "temperature": 28.03,
+    "condition": "nubes",
+    "timestamp": "2026-02-27 10:00:15"
+  }
+]
